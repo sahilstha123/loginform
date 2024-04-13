@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #DBE4F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-box {
+    width: 90%;
+    max-width: 500px;
+    background: #F3F8FE;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .form-box h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #3D4785;
+    position: relative; /* Ensure relative positioning for pseudo-element */
+  }
+  
+  .form-box h1::after {
+    content: ''; /* This is required for pseudo-elements; it represents the content to be inserted */
+    position: absolute; /* Position the pseudo-element relative to the h1 */
+    bottom: -10px; /* Adjust this value to position the line below the h1 text */
+    left: 50%; /* Position the line horizontally at 50% of the parent element (h1) */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 40px;
+    height: 3px;
+    background-color: #3D4785; /* Styling for the line */
+  }
+  .input-field{
+    background: #ebeaea;
+    margin: 15px 0px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  input{
+    width:100%;
+    background: transparent;
+    outline: none;
+    border: 0;
+    padding: 18px 15px;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+  }
+  .input-field i{
+    margin-left: 15px;
+    color:#626060;
+  }
+  form p{
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  form p a{
+    text-decoration: none;
+    color:#3D4785;
+  }
+  .btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn-field button{
+    flex-basis: 48%;
+    background: #3D4785;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    transition: background 1s;
+  }
+  .btn-field button.disabled{
+    background-color:#ebeaea ;
+    color:#626060;
+  }
